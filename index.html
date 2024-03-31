@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset=" UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Compeng Hospital Website</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header>
+        <h2 class="logo">Hospital</h2>
+        <nav class="navigation">
+            <a href="#">Ana Sayfa</a>
+            <a href="#">Hizmetlerimiz</a>
+            <a href="#">Doktorlarımız</a>
+            <a href="#">Hakkımızda</a>
+            <a href="#">İletişim</a>
+            <button class="btnLogin-popup">Giriş Yap/Kaydol</button>
+        </nav>
+    </header>
+    <section class="login-frame">
+        <div class="wrapper" object-visible>
+            <div class="icon-close">
+                <ion-icon name="close-outline"></ion-icon>
+            </div>
+            <div class="form-box login">
+                <h2>Login</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon"></span>
+                        <input type="number" required>
+                        <label class="login">SSN</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"></span>
+                        <input type="password" required>
+                        <label class="login">Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox">
+                            Remember me</label>
+                            <a href="#">Forgot Password</a>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                    <div class="login-register">
+                        <p>Don't you have an account?<a href="#" class="register-link"> Sign Up </a></p>
+                    </div>
+                </form>
+            </div>
+
+
+
+            <div class="form-box register">
+                <h2>Registration</h2>
+                <form action="#">
+                    <label class="user-type">User Type:<select>
+                        <option>Doctor</option>
+                        <option>Patient</option>
+                        </select>
+                        </label>
+                    </select>
+                    <div class="input-box">
+                        <input type="text" required>
+                        <label>Name</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" required>
+                        <label>Username</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"></span>
+                        <input type="number" required>
+                        <label>SSN</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" required>
+                        <label>E-mail</label>
+                    </div>
+                    
+                    <div class="input-box">
+                        <span class="icon"></span>
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox">I agree to terms & conditions </label>
+                    </div>
+                    <button type="submit" class="btn">Register</button>
+                    <div class="login-register">
+                        <p>Already have an account?<a href="#" class="login-link"> Log in </a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>

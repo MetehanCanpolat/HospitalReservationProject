@@ -1,0 +1,325 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url(background.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 70px;
+  backdrop-filter: blur(4px);
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+}
+
+.logo {
+  width: 135px;
+  height: 50px;
+  font-size: 2em;
+  color: #fff;
+  user-select: none;
+  border-radius: 6px;
+  border: 4px solid white;
+  border-radius: 7px;
+  font-weight: 1000;
+  margin-left: 10px;
+}
+
+.navigation a {
+  position: relative;
+  font-size: 1.2em;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 10px;
+}
+.navigation a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+.navigation a:hover::after {
+  transform: scaleX(1);
+}
+
+.navigation .btnLogin-popup {
+  width: 130px;
+  height: 50px;
+  background-color: transparent;
+  border: 2px solid white;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9em;
+  color: #fff;
+  font-weight: 600;
+  margin-left: 20px;
+  transition: 0.5s;
+}
+.navigation .btnLogin-popup:hover {
+  background-color: #606060;
+  color: white;
+}
+.login-frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 110vh;
+  width: 100%;
+}
+
+.wrapper {
+  position: relative;
+  width: 400px;
+  height: 360px;
+  background-color: transparent;
+  border: 5px solid #699ecf;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 30px #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease, height 0.5s ease;
+  overflow: hidden;
+}
+.wrapper.active-popup {
+  transform: scale(1);
+}
+
+.wrapper.active {
+  position: absolute;
+  top: 100px;
+  height: 500px;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-box h2 {
+  margin-top: -15px;
+  margin-bottom: 10px;
+  font-size: 2em;
+  color: white;
+  text-align: center;
+}
+.opt {
+  color: white;
+  position: relative;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid #000000;
+  margin: 20px 0;
+}
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1.2em;
+  color: white;
+  font-weight: 500;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.input-box input:focus ~ label {
+  top: -5px;
+}
+.input-box input:valid ~ label {
+  top: -5px;
+}
+.form-box.register .input-box {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  border-bottom: 2px solid #000000;
+  margin-top: 25px;
+  margin-left: 0;
+}
+
+.user-type {
+  position: relative;
+  top: 8px;
+  left: 30%;
+  font-size: 1em;
+  color: white;
+  font-weight: 500;
+  margin-top: 30px;
+}
+.user-type select {
+  margin-left: 5px;
+  font-size: 1em;
+}
+
+.form-box.register .input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: white;
+  font-weight: 500;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.form-box.register .input-box input:focus ~ label {
+  top: -5px;
+}
+.form-box.register .input-box input:valid ~ label {
+  top: -5px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: white;
+  font-weight: 600;
+  padding: 0 35px 0 5px;
+}
+.input-box input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-box .icon {
+  position: absolute;
+  right: 8px;
+  font-size: 1.2em;
+  color: white;
+  line-height: 57px;
+}
+
+.remember-forgot {
+  font-size: 0.9em;
+  color: white;
+  font-weight: 500;
+  margin: -5px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.remember-forgot label input {
+  accent-color: white;
+  margin-right: 3px;
+}
+.remember-forgot a {
+  color: white;
+  text-decoration: none;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  color: white;
+  width: 100%;
+  height: 35px;
+  margin-bottom: 0px;
+  font-size: 1.1em;
+  background-color: #699ecf;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 550;
+}
+
+.login-register {
+  font-size: 0.9em;
+  color: white;
+  text-align: center;
+  font-weight: 500;
+  margin: 20px 0 0px;
+}
+
+.login-register p a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.login-register p a:hover {
+  text-decoration: underline;
+}
+
+.wrapper .icon-close {
+  position: absolute;
+  font-size: 2.5em;
+  color: white;
+  border-top-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  top: 0;
+  left: 0;
+  background-color: #699ecf;
+  width: 40px;
+  height: 40px;
+  margin: 4px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.wrapper .icon-close:hover {
+  background-color: #204b74;
+  color: white;
+}
+
+.wrapper .form-box {
+  width: 100%;
+  padding: 40px;
+}
+
+.wrapper .form-box.login {
+  transition: transform 0.17s ease;
+  transform: translateX(0);
+}
+
+.wrapper.active .form-box.login {
+  transform: translateX(-400px);
+}
+
+.wrapper .form-box.register {
+  position: absolute;
+  top: 0;
+  transform: translateX(400px);
+}
+
+.wrapper.active .form-box.register {
+  transition: transform 0.19 ease;
+  transform: translateX(0);
+}
+
