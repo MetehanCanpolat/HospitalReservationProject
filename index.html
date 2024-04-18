@@ -5,48 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <title>Giriş Yap</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-
+    
 </head>
 
+
 <body>
-    <header>
+    <header> 
         <h2 class="logo">Hospital</h2>
         <nav class="navigation">
-            <a href="#">Ana Sayfa</a>
-            <a href="#">Hizmetlerimiz</a>
-            <a href="#">Doktorlarımız</a>
-            <a href="#">Hakkımızda</a>
-            <a href="user.html">İletişim</a>
+            <a href="#home">Ana Sayfa</a>
+            <a href="#services">Hizmetlerimiz</a>
+            <a href="#doctors">Doktorlarımız</a>
+            <a href="#about">Hakkımızda</a>
+            <a href="#contact">İletişim</a>
             <button class="btnLogin-popup">Giriş Yap/Kaydol</button>
         </nav>
     </header>
-    <section class="login-frame">
+    <section id="home" class="login-frame">
+        <h1>Hoşgeldiniz</h1>
         <div class="wrapper" object-visible>
             <div class="icon-close">
                 <ion-icon name="close-outline"></ion-icon>
             </div>
             <div class="form-box login">
-                <h2>Login</h2>
+                <h2>Giriş</h2>
                 <form action="#">
                     <div class="input-box">
                         <span class="icon"></span>
                         <input type="number" required>
-                        <label class="login">SSN</label>
+                        <label class="login">TC Kimlik No</label>
                     </div>
                     <div class="input-box">
                         <span class="icon"></span>
                         <input type="password" required>
-                        <label class="login">Password</label>
+                        <label class="login">Şifre</label>
                     </div>
                     <div class="remember-forgot">
-                        <label><input type="checkbox">
-                            Remember me</label>
-                            <a href="#">Forgot Password</a>
+                        <label><input type="checkbox">Beni Hatırla</label>
+                            <a href="#">Şifremi Unuttum</a>
                     </div>
-                    <button type="submit" class="btn">Login</button>
+                    <button type="submit" class="btn">Giriş yap</button>
                     <div class="login-register">
-                        <p>Don't you have an account?<a href="#" class="register-link"> Sign Up </a></p>
+                        <p>Hesabınız mı yok?<a href="#" class="register-link"> Kayıt Ol </a></p>
                     </div>
                 </form>
             </div>
@@ -54,26 +56,26 @@
 
 
             <div class="form-box register">
-                <h2>Registration</h2>
+                <h2>Kayıt</h2>
                 <form action="#">
-                    <label class="user-type">User Type:<select>
-                        <option>Doctor</option>
-                        <option>Patient</option>
+                    <label class="user-type">Kullanıcı türü:<select>
+                        <option>Doktor</option>
+                        <option>Hasta</option>
                         </select>
                         </label>
                     </select>
                     <div class="input-box">
                         <input type="text" required>
-                        <label>Name</label>
+                        <label>İsim</label>
                     </div>
                     <div class="input-box">
                         <input type="text" required>
-                        <label>Username</label>
+                        <label>Soyisim</label>
                     </div>
                     <div class="input-box">
                         <span class="icon"></span>
                         <input type="number" required>
-                        <label>SSN</label>
+                        <label>TC Kimlik No</label>
                     </div>
                     <div class="input-box">
                         <input type="email" required>
@@ -83,20 +85,186 @@
                     <div class="input-box">
                         <span class="icon"></span>
                         <input type="password" required>
-                        <label>Password</label>
+                        <label>Şifre</label>
                     </div>
                     <div class="remember-forgot">
-                        <label><input type="checkbox">I agree to terms & conditions </label>
+                        <label><input type="checkbox">Tüm şartlar ve koşulları kabul ediyorum.</label>
                     </div>
-                    <button type="submit" class="btn">Register</button>
+                    <button type="submit" class="btn">Kaydol</button>
                     <div class="login-register">
-                        <p>Already have an account?<a href="#" class="login-link"> Log in </a></p>
+                        <p>Zaten bir hesabınız var mı?<a href="#" class="login-link"> Giriş Yap </a></p>
                     </div>
                 </form>
             </div>
         </div>
     </section>
-    <script src="script.js"></script>
+
+    <section class="page" id="services">
+        <div class="services">
+            <div class="container">
+                <div class="image"><img src="media/services/md_2.jpg"></div>
+                <div class="image"><img src="media/services/md_3.jpg"></div>
+                <div class="image"><img src="media/services/Diger-Saglik-Personeli-1024x682.jpg"></div>
+                <div class="image"><img src="media/services/MR.jpg"></div>
+                <div class="image"><img src="media/services/hastane-iç-ahsap-dizayn18.jpg"></div>
+                <div class="image"><img src="media/services/download.jpeg"></div>
+                <div class="image"><img src="media/services/400px-Guven_hastanesi_resimleri_3.jpg"></div>
+                <div class="image"><img src="media/services/istockphoto-1298375809-612x612.jpg"></div>
+
+            </div>
+        </div>
+            <div class="popup-image">
+                <span>&times;</span>
+                <img src="media/services/md_2.jpg">
+            </div>
+    </section>
+
+    <section class="page" id="doctors"> 
+        
+
+        <section class="card-container">
+            <div class="card">
+                <div class="cardimg">
+                    <img src="media/Doctors/unknown.jpg" alt="">
+                </div>
+                <h2> İsim Soyisim</h2>
+                <p> Ünvan ve Uzmanlık Alanı</p>
+            </div>
+            <div class="card">
+                <div class="cardimg">
+                    <img src="media/Doctors/unknown.jpg" alt="">
+                </div>
+                <h2> İsim Soyisim</h2>
+                <p> Ünvan ve Uzmanlık Alanı</p>
+            </div><div class="card">
+                <div class="cardimg">
+                    <img src="media/Doctors/unknown.jpg" alt="">
+                </div>
+                <h2> İsim Soyisim</h2>
+                <p> Ünvan ve Uzmanlık Alanı</p>
+            </div><div class="card">
+                <div class="cardimg">
+                    <img src="media/Doctors/unknown.jpg" alt="">
+                </div>
+                <h2> İsim Soyisim</h2>
+                <p> Ünvan ve Uzmanlık Alanı</p>
+            </div><div class="card">
+                <div class="cardimg">
+                    <img src="media/Doctors/unknown.jpg" alt="">
+                </div>
+                <h2> İsim Soyisim</h2>
+                <p> Ünvan ve Uzmanlık Alanı</p>
+            </div><div class="card">
+                <div class="cardimg">
+                    <img src="media/Doctors/unknown.jpg" alt="">
+                </div>
+                <h2> İsim Soyisim</h2>
+                <p> Ünvan ve Uzmanlık Alanı</p>
+            </div><div class="card">
+                <div class="cardimg">
+                    <img src="media/Doctors/unknown.jpg" alt="">
+                </div>
+                <h2> İsim Soyisim</h2>
+                <p> Ünvan ve Uzmanlık Alanı</p>
+            </div>
+        </section> 
+    </section>
+
+    <section class="page" id="about">
+        <div class="about-section">
+            <div class="about-container">
+                <div class="content-section">
+                    <div class="title">
+                        <h1> Hakkımızda </h1>
+                    </div>
+                    <div class="content">
+                        <h3>Türkiye'nin Sağlık Gücüne Güç Katan Hastane</h3>
+                        <p> 
+                            Türkiye’nin en köklü ve deneyimli sağlık 
+                            gruplarından olan MLP Care Grubu’nun amiral 
+                            gemisi konumundaki XXXXXX Hastaneleri 
+                            olarak, 1993 yılından bu yana ülkemizin 12
+                            ilinde 21 hastanemiz ile hizmet veriyoruz. 
+                            "Sağlıklı yaşamak, sağlık hizmetlerinden 
+                            eşit derecede faydalanmak herkesin en temel
+                            hakkıdır" ilkesiyle zincirin halkalarını 
+                            çoğaltmaya devam ederken, Türkiye'nin her 
+                            yerine yayılarak, tıbbi etik ilkelerden ödün
+                            vermeden, gelişmiş teknolojimizle sağlık 
+                            standartlarını yükseltmek konusunda emin 
+                            adımlarla ilerliyoruz. 
+                        </p>
+                        <div class="read-button">
+                            <a href=""> Read More</a>
+                        </div>
+                    </div>
+                    <div class="social">
+                            
+                    </div>
+                </div>
+                <div class="image-section">
+                    <img src="media/aboutus/depositphotos_28608447-stock-photo-male-doctor-in-front-of.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="page" id="contact">
+        <div class="contact">
+            <div class="contact-content">
+                <h2> Bizimle iletişime geçin.</h2>
+                <p>Görüşleriniz bizim için her daim değerlidir.</p>
+            </div>
+            <div class="contact-container">
+                <div class="contactInfo">
+                    <div class="contact-box">
+                        <div class="contact-icon"><ion-icon name="map-outline"></ion-icon></div>
+                        <div class="contact-text">
+                            <h3>Adres:</h3>
+                            <p> xxxxx Caddesi xxxx Sokak Semt / Şehir</p>
+                        </div>
+                    </div>
+                    <div class="contact-box">
+                        <div class="contact-icon"><ion-icon name="call-outline"></ion-icon></div>
+                        <div class="contact-text">
+                            <h3>Phone</h3>
+                            <p>+90 (xxx) xxx xxxx</p>
+                        </div>
+                    </div>
+                    <div class="contact-box">
+                        <div class="contact-icon"><ion-icon name="mail-outline"></ion-icon></div>
+                        <div class="contact-text">
+                            <h3>E-mail:</h3>
+                            <p>xxxxxx@hastane.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contactForm">
+                    <form>
+                        <h2> İletişim Formu</h2>
+                        <div class="contact-input-box">
+                            <input type="text" name="" required="required">
+                            <span>İsim Soyisim</span>
+                        </div>
+                        <div class="contact-input-box">
+                            <input type="email" name="" required="required">
+                            <span>E-mail</span>
+                        </div>
+                        <div class="contact-input-box">
+                            <textarea  required="required"> </textarea>
+                            <span>Mesajınızı yazın...</span>
+                        </div>
+                        <div class="contact-input-box">
+                            <input type="submit" name="" value="Send">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
 </body>
