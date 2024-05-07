@@ -1,11 +1,20 @@
+<?php 
+   session_start();
+
+   require_once("includes/baglan.php");
+   if($_SESSION['valid'] != "1"){
+    header("Location: index.php");
+   }
+?>
 <!DOCTYPE html>
 
 <head>
   <meta charset=" UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width-device-width, initial-scale=1.0" />
-  <title>Hasta Panel</title>
+  <title>Randevularım</title>
   <link rel="stylesheet" href="user.css" />
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -53,41 +62,34 @@
   <header>
     <h2 class="logo">Hospital</h2>
     <nav class="navigation">
-      <a href="#">Ana Sayfa</a>
-      <a href="#">Hizmetlerimiz</a>
-      <a href="#">Doktorlarımız</a>
-      <a href="#">Hakkımızda</a>
-      <a href="#">İletişim</a>
-      <button
-        class="btnLogin-popup"
-        onclick="window.location.href='index.html'"
-      >
-        Çıkış Yap
-      </button>
+      <a href="index.php">Ana Sayfa</a>
+      <button class="btnClose-popup" onclick="window.location.href='logout.php'">Çıkış Yap</button>
     </nav>
   </header>
+  
   <section class="login-frame">
     <div class="wrapper" object-visible>
-      <div class="icon-close">
-        <ion-icon name="close-outline"></ion-icon>
-      </div>
-
       <div class="container">
-        <h1>Hasta Bilgi Sayfası</h1>
-        <label for="patientName">Hasta Adı Soyadı:</label>
-        <label for="patientName">Hasta TC no:</label>
-        <label for="patientAge">Hasta Yaşı:</label>
-        <label for="patientCondition">Hasta Durumu:</label>
-        <br />
-        <button onclick="window.location.href='randevularim.html'">
-          Randevularım
-        </button>
-        <button onclick="window.location.href='sonuclarim.html'">
-          Sonuçlarım
-        </button>
-        <button onclick="window.location.href='appointment.html'">
-          Randevu Al
-        </button>
+      <h1>Randevularım</h1>
+        <?php
+
+            $isim = $_SESSION['isim'];
+            $soyisim = $_SESSION['soyisim'];
+            $doktor = $isim . " " . $soyisim;
+            $query = "SELECT date, time, clinic FROM randevular WHERE doktor = '$doktor'";
+            $post = $baglan->prepare($query);
+            $statement = $post->execute();  
+            //$row = $post->fetch(PDO::FETCH_ASSOC);
+            $randevusayisi = $post->rowCount();
+            while ($row = $post->fetch(PDO::FETCH_ASSOC)) {
+              $doktor = $row['doktor'];
+              $date = $row['date'];
+              $time = $row['time'];
+              $clinic = $row['clinic'];
+              echo '<label for="patientName"> Klinik: ' . $clinic . ', Tarih: ' . $date . ', Saat: ' . $time . '</label><br>';
+            }
+            
+        ?>
       </div>
     </div>
   </section>

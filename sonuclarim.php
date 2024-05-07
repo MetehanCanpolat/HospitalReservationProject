@@ -1,3 +1,11 @@
+<?php 
+   session_start();
+
+   require_once("includes/baglan.php");
+   if($_SESSION['valid'] != "1"){
+    header("Location: index.php");
+   }
+?>
 <!DOCTYPE html>
 
 <head>
@@ -6,8 +14,8 @@
   <meta name="viewport" content="width-device-width, initial-scale=1.0" />
   <title>Sonuçlarım</title>
   <link rel="stylesheet" href="user.css" />
-
   <style>
+    
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -49,37 +57,25 @@
     }
   </style>
 </head>
-
 <body>
   <header>
     <h2 class="logo">Hospital</h2>
     <nav class="navigation">
-      <a href="#">Ana Sayfa</a>
-      <a href="#">Hizmetlerimiz</a>
-      <a href="#">Doktorlarımız</a>
-      <a href="#">Hakkımızda</a>
-      <a href="#">İletişim</a>
-       <!-- Çıkış butonunu backende bağlarsın HALİT -->
-       <button class="btnLogin-popup"  onclick="window.location.href='index.html'" >Çıkış Yap</button>
+      <a href="index.php">Ana Sayfa</a>
+       <button class="btnClose-popup"  onclick="window.location.href='logout.php'" >Çıkış Yap</button>
     </nav>
   </header>
   <section class="login-frame">
     <div class="wrapper" object-visible>
       <div class="container">
         <h1>Sonuçlarım</h1>
-        <label for="patientName">Kan Tahlili?</label>
-        <label for="patientAge">Röntgen?</label>
-        <label for="patientCondition">Hastalık?</label>
-        <br />
-        <button onclick="window.location.href='randevularim.html'">
-          Randevularım
-        </button>
-        <button onclick="window.location.href='sonuclarim.html'">
-          Sonuçlarım
-        </button>
-        <button onclick="window.location.href='appointment.html'">
-          Randevu Al
-        </button>
+        <label for="patientName">Kan Tahlili Belgesi</label>
+        <label for="patientAge">Röntgen Belgesi</label>
+        <label for="patientCondition">Hastalık Belgesi</label>
+        <br/>
+        <button onclick="window.location.href='randevularim.php'">Randevularım</button>
+        <button onclick="window.location.href='sonuclarim.php'">Sonuçlarım</button>
+        <button onclick="window.location.href='appointment.php'">Randevu Al</button>
       </div>
     </div>
   </section>
