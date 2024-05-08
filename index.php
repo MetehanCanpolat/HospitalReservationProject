@@ -207,7 +207,8 @@
                         <label class="login">Şifre</label>
                     </div>
                     <div class="remember-forgot">
-                        <label><input type="checkbox">Beni Hatırla</label>
+                        <a href=""></a>
+                        <!--<label><input type="checkbox">Beni Hatırla</label> -->
                             <a href="#">Şifremi Unuttum</a>
                     </div>
                     <button type="submit" name="loginsubmit" class="btn">Giriş yap</button>
