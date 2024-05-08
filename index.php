@@ -41,7 +41,13 @@
             <?php
                 if($_SESSION['valid'] != "1"){
                     ?>
-                    <button class="btnLogin-popup"><?php echo "Giriş Yap/Kaydol"; ?></button>
+                    <!-- <button class="btnLogin-popup"><?php //echo "Giriş Yap/Kaydol"; ?></button>-->
+                    <button class="btnLogin-popup" onclick="goToTopOfPage()">Giriş Yap/Kaydol</button>
+                <script>
+                    function goToTopOfPage() {
+                        window.scrollTo(0, 0);
+                    }
+                </script>
                     <?php
                 }else{
                     if($_SESSION['usertype'] == "doktor"){
@@ -207,8 +213,8 @@
                         <label class="login">Şifre</label>
                     </div>
                     <div class="remember-forgot">
-                        <a href=""></a>
-                        <!--<label><input type="checkbox">Beni Hatırla</label> -->
+                            <a href=""></a>
+                    <!--<label><input type="checkbox">Beni Hatırla</label> -->
                             <a href="#">Şifremi Unuttum</a>
                     </div>
                     <button type="submit" name="loginsubmit" class="btn">Giriş yap</button>
@@ -368,21 +374,21 @@
                         <div class="co7ntact-icon"><ion-icon name="map-outline"></ion-icon></div>
                         <div class="contact-text">
                             <h3>Adres:</h3>
-                            <p> xxxxx Caddesi xxxx Sokak Semt / Şehir</p>
+                            <p> Ali Osman Caddesi 300.Sokak Sarıçam/Adana</p>
                         </div>
                     </div>
                     <div class="contact-box">
                         <div class="contact-icon"><ion-icon name="call-outline"></ion-icon></div>
                         <div class="contact-text">
-                            <h3>Phone</h3>
-                            <p>+90 (xxx) xxx xxxx</p>
+                            <h3>İletişim</h3>
+                            <p>+338 (212) 39 42</p>
                         </div>
                     </div>
                     <div class="contact-box">
                         <div class="contact-icon"><ion-icon name="mail-outline"></ion-icon></div>
                         <div class="contact-text">
                             <h3>E-mail:</h3>
-                            <p>xxxxxx@hastane.com</p>
+                            <p>adanaaliyye@hastane.com</p>
                         </div>
                     </div>
                 </div>
@@ -402,7 +408,7 @@
                             <span>Mesajınızı yazın...</span>
                         </div>
                         <div class="contact-input-box">
-                            <input type="submit" name="emailsubmit" name="" value="Send">
+                            <input type="submit" name="emailsubmit" name="" value="Gönder">
                         </div>
                     </form>
                 </div>

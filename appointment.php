@@ -126,7 +126,8 @@
                   $post = $baglan->prepare($query_check);
                   $statement = $post->execute();
                   if ($post->rowCount() > 0) {
-                    echo "Bu randevu zaten mevcut!";
+                    //echo "Bu randevu zaten mevcut!";
+                    echo '<div style="color: red; text-align: center;">Bu randevu zaten mevcut!</div>';
                   } else {
                     $query = "INSERT INTO randevular (doktor, hasta, clinic, date, time) VALUES ('$doctor', '$hasta', '$clinic', '$date', '$time')";
                     $post = $baglan->prepare($query);
@@ -134,7 +135,8 @@
                   }
 
               }else{
-                echo ' <label for="errorver"> KLİNİK HATASI </label>';
+                echo '<div style="color: red; text-align: center;">KLİNİK HATASI!</div>';
+                //echo ' <label for="errorver"> KLİNİK HATASI </label>';
               }
            }else{
 
